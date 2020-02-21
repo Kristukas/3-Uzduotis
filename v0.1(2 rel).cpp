@@ -1,34 +1,46 @@
 #include <bits/stdc++.h>
 #include<limits>
 #include <vector>
-using namespace std;
+//using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::vector;
+using std::swap;
+using std::numeric_limits;
+using std::fixed;
+using std::setprecision;
+using std::setw;
 struct pazymiai
 {
     string vardas, pavarde;
     vector <int> pazymys={};
-    char MV;
     double galutinis;
     pazymiai()
     {
         galutinis =0;
     }
 };
-void Rikiuoti(pazymiai M[],int n)
+void Rikiuoti(vector <int> pazymys,int n)
 {
     for (int i = 0; i < n - 1; i++)
         for (int j = i + 1; j < n; j++)
-           if (M[i].pazymys[0] > M[j].pazymys[0])
-              swap(M[i], M[j]);
+           if (pazymys[i] > pazymys[j])
+              swap(pazymys[i], pazymys[j]);
 }
 int main()
 {
     pazymiai M[100];
     int x=1;
+    char MV;
     srand(time(NULL));
     for(int i=0; i < x; i++)
     {
     cout <<"Iveskite studento varda" << endl;
     cin >> M[i].vardas;
+    cin.ignore();
+    cin.clear();
     cout <<"Iveskite studento pavarde" << endl;
     cin >>M[i].pavarde;
     cout << "Ar norite namu darbu rezultatus sugeneruoti atsitiktinai?" << endl;
@@ -42,7 +54,7 @@ int main()
         }
         else {
             cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(500, '\n');
             cout << "KLAIDA. Irasykite 'taip' arba 'ne' " << endl;
         }
     }
@@ -62,7 +74,7 @@ int main()
         if(a==0 && skc == 0)
         {
             cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(500, '\n');
             cout << "KLAIDA. Iveskite tinkama skaiciu " << endl;
         }
         else
@@ -70,7 +82,6 @@ int main()
             if(!cin.fail() && skc <=10 && skc >=1 && skc==(int)skc)
         {
             M[a].pazymys.push_back(skc) ;
-            cout << " cia " << M[a].pazymys[0] << endl;
             a++;
             kiekis+=skc;
         }
@@ -79,7 +90,7 @@ int main()
         if(cin.fail() || skc == 0)
            {
                 cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(500, '\n');
                 cout << "KLAIDA. Iveskite tinkama skaiciu " << endl;
            }
            if (a!=0 && skc ==-1)
@@ -99,7 +110,7 @@ int main()
             else
             {
                 cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(500, '\n');
                 cout << "KLAIDA. skaicius negalimas ";
             }
         }
@@ -122,7 +133,7 @@ int main()
         }
         else {
             cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(500, '\n');
             cout << "KLAIDA. Irasykite 'taip' arba 'ne' " << endl;
         }
     }
@@ -133,43 +144,46 @@ int main()
     while(1)
         {
             cin >> egzaminas;
-            if(!cin.fail() && egzaminas<10 && egzaminas==(int)egzaminas && egzaminas>0 && egzaminas==(int)egzaminas  )
+            if(!cin.fail() && egzaminas<=10 && egzaminas==(int)egzaminas && egzaminas>0 && egzaminas==(int)egzaminas  )
             {
                break;
             }
             else
             {
                   cin.clear();
-                  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                  cin.ignore(500, '\n');
                   cout << "KLAIDA. Iveskite tinkama egzamino rezultata desimtbaleje sistemoje " <<endl;
             }
         }
 
     }
-    else
+    else if(klausimas2 == "taip")
     {
         egzaminas=rand()%10+1;
     }
+    if(x==1)
+    {
     cout << "Jei galutini bala norite skauciuoti su mediana spauskite M, jei vidurkiu V " << endl;
     while(1)
     {
-        cin >> M[i].MV;
-        if(M[i].MV=='M' || M[i].MV=='V')
+        cin >> MV;
+        if(MV=='M' || MV=='V')
         {
             break;
         }
         else {
             cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(500, '\n');
             cout << "KLAIDA. Iveskite tinkama raide ";
         }
 
     }
-    if(M[i].MV=='V')
+    }
+    if(MV=='V')
     M[i].galutinis = 0.4*(kiekis/a)+ (0.6*egzaminas);
-    else
+    else if(MV=='M')
     {
-        Rikiuoti(M,a);
+        Rikiuoti(M[i].pazymys,a);
         if(a%2!=0)
             {
                 int k=0;
@@ -196,32 +210,33 @@ int main()
     }
 
     }
-    cout.width(15);
     cout << "Pavarde";
-    cout.width(15);
-    cout << "Vardas    " ;
-    cout.width(15);
-    for(int i=0; i < x; i ++)
-    {
-        if(M[i].MV=='V')
-        {
-        cout << "Galutinis(Vid.)" << endl;
-        cout.width(15);
-        cout << M[i].pavarde;
-        cout.width(15);
-        cout << M[i].vardas;
-        cout.width(15);
-        cout << fixed<<setprecision(2) << M[i].galutinis << endl;
-        }
-        else
-        {
-            cout << "Galutinis (Med.)" << endl;
-            cout << M[i].pavarde;
-            cout.width(15);
-            cout << M[i].vardas ;
-            cout.width(15);
-            cout <<  fixed<<setprecision(2) << M[i].galutinis << endl;
-        }
-    }
+    cout << setw(14);
+    cout << "Vardas" ;
+    cout << setw(24);
+   if(MV=='M')
+   {
+       cout << "Galutinis (Med.)" << endl;
+       for(int i=0; i <x; i++)
+       {
+           cout << M[i].pavarde;
+           cout << setw(14);
+           cout << M[i].vardas;
+           cout << setw(20);
+           cout << fixed<<setprecision(2) << M[i].galutinis << endl;
+       }
+   }
+   else if (MV=='V')
+   {
+       cout << "Galutinis(Vid.)" << endl;
+       for(int i=0; i <x; i++)
+       {
+           cout << M[i].pavarde;
+           cout << setw(14);
+           cout << M[i].vardas;
+           cout << setw(20);
+           cout << fixed<<setprecision(2) << M[i].galutinis << endl;
+       }
+   }
 
 }
