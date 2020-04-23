@@ -29,8 +29,8 @@ Namu darbu pasirinktas kiekis: 5
  
  # ***1.0 versija:***
  # Vector
-![](/Vector/vector.JPG)
+![](/photos/vector.JPG)
 # Deque
-![](/Deque/deque.JPG)
+![](/photos/deque.JPG)
 # List
-![](/List/list.JPG)
+![](/photos/list.JPG)
