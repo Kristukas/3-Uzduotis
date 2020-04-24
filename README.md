@@ -20,4 +20,12 @@
 |  Rušiavimas   |   0.627082    |    6.4899     |
 | Programos veikimo laikas (Bendras) |               |    166.216     |
 
+# ***List***
+ 
+|               |    1000000    |    10000000   |
+| ------------- | ------------- | ------------- |
+|   Skaitymas   |    5.17513    |    51.5988    |
+|  Rušiavimas   |   0.647078    |    9.15961    |
+| Programos veikimo laikas (Bendras) |               |    166.216     |
+
 
