@@ -10,7 +10,7 @@
       | Nuskaitymas |             |            |
 
 
-|    1000000    | Second Header |
+|    1000000    |    10000000   |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
