@@ -5,14 +5,9 @@
  ***Spartos testavimas***
  Vector
  
-      |             |   1000000   |  10000000  |
-      |-------------|-------------|------------|
-      | Nuskaitymas |             |            |
-
-
-|    1000000    |    10000000   |    10000000   |
+|               |    10000000   |    10000000   |
 | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  |    10000000   |
-| Content Cell  | Content Cell  |    10000000   |
+|   Skaitymas   | Content Cell  |    10000000   |
+|  Rusiavimas   | Content Cell  |    10000000   |
 
 
