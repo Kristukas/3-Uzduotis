@@ -10,7 +10,7 @@
 | ------------- | ------------- | ------------- |
 |   Skaitymas   |    5.53755    |    57.9118    |
 |  Rušiavimas   |   0.212938    |    2.19096    |
-| Programos veikimo laikas(Bendras) |               |    157.27     |
+| Programos veikimo laikas (Bendras) |               |    157.27     |
 
 # ***Deque***
  
@@ -18,5 +18,6 @@
 | ------------- | ------------- | ------------- |
 |   Skaitymas   |    5.37638    |    52.7507    |
 |  Rušiavimas   |   0.627082    |    6.4899     |
+| Programos veikimo laikas (Bendras) |               |    166.216     |
 
 
