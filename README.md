@@ -28,11 +28,11 @@
 |  Rušiavimas   |   0.645537    |    9.1854     |
 | Programos veikimo laikas (Bendras) |               |    154.377     |
 
-#***Flagų testavimas (su vektorium)***
+# ***Flagų testavimas (su vektorium)***
 
 |    Flag 01    |    1000000    |    10000000   |
 | ------------- | ------------- | ------------- |
-|   Skaitymas   |    5.09996    |    51.1525    |
-|  Rušiavimas   |   0.645537    |    9.1854     |
+|   Skaitymas   |    5.89742    |    58.942     |
+|  Rušiavimas   |   0.213626    |    2.18548    |
 
 
