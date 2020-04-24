@@ -1,1 +1,1 @@
-#***Trečia Užduotis
+#Trecia Uzduotis
