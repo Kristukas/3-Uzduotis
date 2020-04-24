@@ -28,6 +28,11 @@
 |  Rušiavimas   |   0.645537    |    9.1854     |
 | Programos veikimo laikas (Bendras) |               |    154.377     |
 
+***Išvada***
+
+Perėjus prie klasės Vectoriaus veikimas paletėjo, Deque išliko labai panašus, tačiau List skaitymo laikas ženkliai sumažėjo.
+Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
+
 # ***Flagų testavimas (su vektorium)***
 
 |    Flag 01    |    1000000    |    10000000   |
