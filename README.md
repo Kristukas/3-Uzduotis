@@ -52,4 +52,9 @@ Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
 |   Skaitymas   |    5.3074     |    52.5678    |
 |  Rušiavimas   |    0.196273   |    2.2294     |
 
+***Rezultatai***
+
+Naudojant 01 flagą, gauti laikai yra labai panašūs
+Naudojant 02 flagą, nuskaitymo laikas ženkliai sumažėjo.
+Naudojant 03 flagą, nuskaitymo laikas taip pat gerokai sumažėjas bei gauti rezultatai labai panašūs į 02 flago. 
 
