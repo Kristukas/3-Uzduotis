@@ -3,7 +3,7 @@
  Versijoje iš struktūros pereita į klasę.
  
  ***Spartos testavimas***
- ***Vector
+ ***Vector***
  
 |               |    1000000    |    10000000   |
 | ------------- | ------------- | ------------- |
