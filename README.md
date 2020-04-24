@@ -24,8 +24,8 @@
  
 |               |    1000000    |    10000000   |
 | ------------- | ------------- | ------------- |
-|   Skaitymas   |    5.17513    |    51.5988    |
-|  Rušiavimas   |   0.647078    |    9.15961    |
-| Programos veikimo laikas (Bendras) |               |    166.216     |
+|   Skaitymas   |    5.09996    |    51.1525    |
+|  Rušiavimas   |   0.645537    |    9.1854     |
+| Programos veikimo laikas (Bendras) |               |    154.377     |
 
 
