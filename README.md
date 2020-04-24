@@ -10,13 +10,9 @@
       | Nuskaitymas |             |            |
 
 
-|    1000000    |    10000000   |   
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|    1000000    |    10000000   |    10000000   |
+| ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  |    10000000   |
+| Content Cell  | Content Cell  |    10000000   |
 
-|    1000000    |
-| ------------- |
-| Content Cell  |
-| Content Cell  |
 
