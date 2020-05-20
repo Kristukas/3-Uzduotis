@@ -92,4 +92,4 @@ Iš vienos studento klasės sukurta bazinė ir išvestinė(derived) klasė.
 
 1. Atsisiūskite UNIX sistemą.
 2. Atsidarę UNIX sistemą nueikite į programos aplanką ir parašykite ***make***.
-
+3. Atidarykite sukurtą makefile failo aplankalą.
