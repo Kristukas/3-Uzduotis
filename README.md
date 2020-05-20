@@ -3,7 +3,7 @@
  Versijoje iš struktūros pereita į klasę.
  
  ***Spartos testavimas***
-# Su ***struct*** 
+# Naudojant ***struct*** 
 
  # Vector
  
@@ -26,7 +26,7 @@
 |   Skaitymas   |    5.32932    |    52.4372    |
 |  Rušiavimas   |    0.655486   |    9.45772    |
 
-# Su ***class*** 
+# Naudojant ***class*** 
 # ***Vector***
  
 |               |    1000000    |    10000000   |
