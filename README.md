@@ -86,3 +86,10 @@ Versijoje pridėti operatoriai.
 Iš vienos studento klasės sukurta bazinė ir išvestinė(derived) klasė.
 
 Žmogui skirta bazinė klasė padaryta abstrakčioji klasė.
+# v2.0
+
+# ***Naudojimosi instrukcija***
+
+1. Atsisiūskite UNIX sistemą.
+2. Atsidarę UNIX sistemą nueikite į programos aplanką ir parašykite ***make***.
+
