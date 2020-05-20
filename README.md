@@ -50,7 +50,7 @@
 
 ***Išvada***
 
-Perėjus prie klasės Vectoriaus veikimas paletėjo, Deque išliko labai panašus, tačiau List skaitymo laikas ženkliai sumažėjo.
+Perėjus prie klasės programų veikimo laikas išliko labai panašus.
 Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
 
 # ***Flagų testavimas (su vektorium)***
