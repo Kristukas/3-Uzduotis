@@ -27,10 +27,34 @@ using std::ifstream;
 using std::stringstream;
 using std::ofstream;
 using std::left;
-class pazymiai
+
+class Zmogus
+{
+protected:
+    string vardas, pavarde;
+
+public:
+    void virtual inline SetVardas(string name)
+    {
+        this->vardas = name;
+    }
+    void virtual inline SetPavarde(string surname)
+    {
+        this->pavarde = surname;
+    }
+    string virtual inline GetVardas() const
+    {
+        return vardas;
+    }
+    string virtual inline GetPavarde() const
+    {
+        return pavarde;
+    }
+};
+
+class pazymiai : public Zmogus
 {
 private:
-    string vardas, pavarde;
     vector <int> pazymys = {};
     double galutinis;
 
@@ -38,14 +62,6 @@ public:
     pazymiai()
     {
         galutinis = 0;
-    }
-    void inline SetVardas(string name)
-    {
-        this->vardas = name;
-    }
-    void inline SetPavarde(string surname)
-    {
-        this->pavarde = surname;
     }
     void inline SetPazymys(int mark)
     {
@@ -55,14 +71,7 @@ public:
     {
         this->galutinis = Galutinis;
     }
-    string inline GetVardas() const
-    {
-        return vardas;
-    }
-    string inline GetPavarde() const
-    {
-        return pavarde;
-    }
+   
     int inline GetPazymys(int Narys) const
     {
         return pazymys[Narys];
@@ -75,7 +84,10 @@ public:
     {
         sort(this->pazymys.begin(), this->pazymys.end());
     }
+    pazymiai& operator = (const pazymiai& Lygybe);
 };
+ofstream& operator << (ofstream& Ats, const pazymiai& i);
+
 void Gen(int& rekursija, int k, string failas0, int namudarbuskc, std::mt19937& mt);
 int countWords(string str);
 bool Rik(pazymiai& a, pazymiai& b);
