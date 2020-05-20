@@ -3,7 +3,7 @@
  Versijoje iš struktūros pereita į klasę.
  
  ***Spartos testavimas***
-# Su struct konteineriais
+# Su ***struct*** konteineriais
 
  # Vector
  
