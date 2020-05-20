@@ -82,6 +82,17 @@ void Skirstymas(int x, list <pazymiai> &M, list <pazymiai>& N, int& N1, int& B1)
     std::chrono::duration<double> diff = end - start;
     std::cout << x << " Rusiavimas i 2 grupes: " << diff.count() << endl;
 }
+
+ofstream& operator << (ofstream& Ats, const pazymiai& i)
+{
+    Ats << i.GetPavarde();
+    Ats << setw(14);
+    Ats << i.GetVardas();
+    Ats << setw(20);
+    Ats << fixed << setprecision(2) << i.GetGalutinis() << endl;
+    return Ats;
+}
+
 void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, list <pazymiai>& N, int B1, list <pazymiai>&M)
 {
     ofstream Ats(ats);
@@ -96,11 +107,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, list <pazymi
         Ats << "Galutinis (Med.)" << endl;
         for (list<pazymiai>::iterator i = N.begin(); i != N.end(); i++)
         {
-            Ats << i->GetPavarde();
-            Ats << setw(14);
-            Ats << i->GetVardas();
-            Ats << setw(20);
-            Ats << fixed << setprecision(2) << i->GetGalutinis() << endl;
+            Ats << *i;
         }
     }
     else if (MV == 'V')
@@ -108,11 +115,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, list <pazymi
         Ats << "Galutinis(Vid.)" << endl;
         for (list<pazymiai>::iterator i = N.begin(); i != N.end(); i++)
         {
-            Ats << i->GetPavarde();
-            Ats << setw(14);
-            Ats << i->GetVardas();
-            Ats << setw(20);
-            Ats << fixed << setprecision(2) << i->GetGalutinis() << endl;
+            Ats << *i;
         }
     }
            
@@ -126,11 +129,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, list <pazymi
                Ats1 << "Galutinis (Med.)" << endl;
                for(list<pazymiai>::iterator i=M.begin(); i!=M.end(); i++)
                {
-                   Ats1 << i->GetPavarde();
-                   Ats1 << setw(14);
-                   Ats1 << i->GetVardas();
-                   Ats1 << setw(20);
-                   Ats1 << fixed<<setprecision(2) << i->GetGalutinis() << endl;
+                   Ats1 << *i;
                }
            }
            else if (MV=='V')
@@ -138,11 +137,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, list <pazymi
                Ats1 << "Galutinis(Vid.)" << endl;
                for(list<pazymiai>::iterator i=M.begin(); i!=M.end(); i++)
                {
-                   Ats1  << i->GetPavarde();
-                   Ats1  << setw(14);
-                   Ats1  << i->GetVardas();
-                   Ats1  << setw(20);
-                   Ats1 << fixed<<setprecision(2) << i->GetGalutinis() << endl;
+                   Ats1 << *i;
                }
            }
 
@@ -245,3 +240,13 @@ bool Pavarde( pazymiai& a, pazymiai& b)
 {
     return a.GetPavarde() < b.GetPavarde();
 }
+
+pazymiai& pazymiai::operator = (const pazymiai& Lygybe)
+{
+    this->vardas = Lygybe.vardas;
+    this->pavarde = Lygybe.pavarde;
+    this->galutinis = Lygybe.galutinis;
+    this->pazymys = Lygybe.pazymys;
+    return *this;
+}
+
