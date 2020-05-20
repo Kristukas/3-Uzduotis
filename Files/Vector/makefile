@@ -1,5 +1,7 @@
 vector: v03.o
 	g++ -o vector vector.cpp v03.o
+Testing: Testing.o v03.o
+	g++ -o Testing Testing.cpp v03.o
 
 v03:
 	g++ -c v03.cpp
