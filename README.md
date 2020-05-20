@@ -58,8 +58,8 @@ Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
 
 |    Flag 01    |    1000000    |    10000000   |
 | ------------- | ------------- | ------------- |
-|   Skaitymas   |    5.65236    |    57.5583    |
-|  Rušiavimas   |   0.196824    |    2.17048    |
+|   Skaitymas   |    5.53379    |    55.7815    |
+|  Rušiavimas   |   0.217807    |    2.04077    |
 
 
 |    Flag 02    |    1000000    |    10000000   |
