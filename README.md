@@ -79,4 +79,5 @@ Naudojant 01 flagą, lyginant su 1.1 versija skaitymo laikas pailgėjo.
 Naudojant 02 flagą, laikai išliko labai panašūs.
 Naudojant 03 flagą, laikai taip pat išliko labai panašūs į 02 flagą ir į 1.1 versiją. 
 
-# v1.1
+# v1.2
+Pridėti operatoriai.
