@@ -81,3 +81,8 @@ Naudojant 03 flagą, laikai taip pat išliko labai panašūs į 02 flagą ir į 
 
 # v1.2
 Versijoje pridėti operatoriai.
+
+# v1.3
+Iš vienos studento klasės sukurta bazinė ir išvestinė(derived) klasė.
+
+Žmogui skirta bazinė klasė padaryta abstrakčioji klasė.
