@@ -51,6 +51,7 @@
 ***Išvada***
 
 Perėjus prie klasės programų veikimo laikas išliko labai panašus.
+
 Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
 
 # ***Flagų testavimas (su vektorium)***
