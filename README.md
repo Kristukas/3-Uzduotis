@@ -75,7 +75,7 @@ Perėjus prie klasių programa tampa saugesnė, mažiau pažeidžiama.
 
 ***Rezultatai***
 
-Naudojant 01 flagą, gauti laikai yra labai panašūs
-Naudojant 02 flagą, nuskaitymo laikas ženkliai sumažėjo.
-Naudojant 03 flagą, nuskaitymo laikas taip pat gerokai sumažėjas bei gauti rezultatai labai panašūs į 02 flago. 
+Naudojant 01 flagą, lyginant su 1.1 versija skaitymo laikas pailgėjo.
+Naudojant 02 flagą, laikai išliko labai panašūs.
+Naudojant 03 flagą, laikai taip pat išliko labai panašūs į 02 flagą ir į 1.1 versiją. 
 
