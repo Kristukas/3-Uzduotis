@@ -77,8 +77,11 @@ public:
     {
         sort(this->pazymys.begin(), this->pazymys.end());
     }
+    pazymiai& operator = (const pazymiai& Lygybe);
  
 };
+ofstream& operator << (ofstream& Ats, const pazymiai& i);
+
 void Gen(int& rekursija, int k, string failas0, int namudarbuskc, std::mt19937& mt);
 int countWords(string str);
 bool Rik(pazymiai& a, pazymiai& b);
