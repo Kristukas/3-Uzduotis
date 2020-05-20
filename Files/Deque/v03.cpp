@@ -81,6 +81,16 @@ void Skirstymas(int x, deque <pazymiai>& M, deque <pazymiai>& N, int& N1, int& B
     std::chrono::duration<double> diff = end - start;
     std::cout << x << " Rusiavimas i 2 grupes: " << diff.count() << endl;
 }
+
+ofstream& operator << (ofstream& Ats, const pazymiai& i)
+{
+    Ats << i.GetPavarde();
+    Ats << setw(14);
+    Ats << i.GetVardas();
+    Ats << setw(20);
+    Ats << fixed << setprecision(2) << i.GetGalutinis() << endl;
+    return Ats;
+}
 void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazymiai>& N, int B1, deque <pazymiai>& M)
 {
     ofstream Ats(ats);
@@ -96,11 +106,8 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazym
         Ats << "Galutinis (Med.)" << endl;
         for (int i = 0; i < N1; i++)
         {
-            Ats << N[i].GetPavarde();
-            Ats << setw(14);
-            Ats << N[i].GetVardas();
-            Ats << setw(20);
-            Ats << fixed << setprecision(2) << N[i].GetGalutinis() << endl;
+            Ats << N[i];
+
         }
     }
     else if (MV == 'V')
@@ -108,11 +115,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazym
         Ats << "Galutinis(Vid.)" << endl;
         for (int i = 0; i < N1; i++)
         {
-            Ats << N[i].GetPavarde();
-            Ats << setw(14);
-            Ats << N[i].GetVardas();
-            Ats << setw(20);
-            Ats << fixed << setprecision(2) << N[i].GetGalutinis() << endl;
+            Ats << N[i];
         }
     }
     sort(M.begin(), M.end(), Rik);
@@ -126,11 +129,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazym
         Ats1 << "Galutinis (Med.)" << endl;
         for (int i = 0; i < x - N1; i++)
         {
-            Ats1 << M[i].GetPavarde();
-            Ats1 << setw(14);
-            Ats1 << M[i].GetVardas();
-            Ats1 << setw(20);
-            Ats1 << fixed << setprecision(2) << M[i].GetGalutinis() << endl;
+            Ats1 << M[i];
         }
     }
     else if (MV == 'V')
@@ -138,11 +137,7 @@ void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazym
         Ats1 << "Galutinis(Vid.)" << endl;
         for (int i = 0; i < x - N1; i++)
         {
-            Ats1 << M[i].GetPavarde();
-            Ats1 << setw(14);
-            Ats1 << M[i].GetVardas();
-            Ats1 << setw(20);
-            Ats1 << fixed << setprecision(2) << M[i].GetGalutinis() << endl;
+            Ats1 << M[i];
         }
     }
 
@@ -243,4 +238,13 @@ bool Rikiavimas(pazymiai& a, pazymiai& b)
 bool Rikiavimas1(pazymiai& a, pazymiai& b)
 {
     return a.GetPavarde() < b.GetPavarde();
+}
+
+pazymiai& pazymiai::operator = (const pazymiai& Lygybe)
+{
+    this->vardas = Lygybe.vardas;
+    this->pavarde = Lygybe.pavarde;
+    this->galutinis = Lygybe.galutinis;
+    this->pazymys = Lygybe.pazymys;
+    return *this;
 }
