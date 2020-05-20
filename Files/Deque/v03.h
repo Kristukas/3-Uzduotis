@@ -10,14 +10,14 @@
 #include <sstream>
 #include <stdio.h>
 #include <chrono>
-#include <vector>
+#include <deque>
 #include <random>
 #include <chrono>
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
-using std::vector;
+using std::deque;
 using std::swap;
 using std::numeric_limits;
 using std::fixed;
@@ -27,25 +27,41 @@ using std::ifstream;
 using std::stringstream;
 using std::ofstream;
 using std::left;
-class pazymiai
+
+class Zmogus
+{
+protected:
+    string vardas, pavarde;
+
+public:
+    void virtual inline SetVardas(string name)
+    {
+        this->vardas = name;
+    }
+    void virtual inline SetPavarde(string surname)
+    {
+        this->pavarde = surname;
+    }
+    string virtual inline GetVardas() const
+    {
+        return vardas;
+    }
+    string virtual inline GetPavarde() const
+    {
+        return pavarde;
+    }
+};
+
+class pazymiai : public Zmogus
 {
 private:
-    string vardas, pavarde;
-    vector <int> pazymys = {};
+    deque <int> pazymys = {};
     double galutinis;
 
 public:
     pazymiai()
     {
         galutinis = 0;
-    }
-    void inline SetVardas(string name)
-    {
-        this->vardas = name;
-    }
-    void inline SetPavarde(string surname)
-    {
-        this->pavarde = surname;
     }
     void inline SetPazymys(int mark)
     {
@@ -55,14 +71,7 @@ public:
     {
         this->galutinis = Galutinis;
     }
-    string inline GetVardas() const
-    {
-        return vardas;
-    }
-    string inline GetPavarde() const
-    {
-        return pavarde;
-    }
+
     int inline GetPazymys(int Narys) const
     {
         return pazymys[Narys];
@@ -83,9 +92,9 @@ void Gen(int& rekursija, int k, string failas0, int namudarbuskc, std::mt19937& 
 int countWords(string str);
 bool Rik(pazymiai& a, pazymiai& b);
 bool Testas(pazymiai& a, pazymiai& b);
-void Skirstymas(int x, vector <pazymiai>& M, vector <pazymiai>& N, int& N1, int& B1);
-void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, vector <pazymiai>& N, int B1, vector <pazymiai>& M);
-void Nuskaitymas(string Gavimas, string dummyline, string line, vector <pazymiai>& M, int& a, char MV, int& x, vector <pazymiai>& N, int& N1, int& B1, string ats, string ats1, int& rekursija2);
+void Skirstymas(int x, deque <pazymiai>& M, deque <pazymiai>& N, int& N1, int& B1);
+void Spausdintuvas(string ats, string ats1, int N1, char MV, int x, deque <pazymiai>& N, int B1, deque <pazymiai>& M);
+void Nuskaitymas(string Gavimas, string dummyline, string line, deque <pazymiai>& M, int& a, char MV, int& x, deque <pazymiai>& N, int& N1, int& B1, string ats, string ats1, int& rekursija2);
 bool Rikiavimas(pazymiai& a, pazymiai& b);
 bool Rikiavimas1(pazymiai& a, pazymiai& b);
 #endif // V03_H_INCLUDED
